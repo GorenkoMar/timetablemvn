@@ -9,7 +9,7 @@ public class TimetableService {
     for (int month = 0; month < 12; month++) {
       if (money >= threshold) {
         count++;
-        int expensesHoliday = money - (((money - expenses) / 300) * 100); // расходы на отдых
+        int expensesHoliday = money - ((money - expenses) / 3);
         money = money - (expensesHoliday + expenses);
       } else {
         money = (money - expenses) + income;
